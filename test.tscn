@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://beqnnx6u3bg51"]
+
+[ext_resource type="PackedScene" uid="uid://636d8wv4vvfb" path="res://TestMap.blend" id="1_4mtr3"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="2_a8jvi"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="TestMap" parent="." instance=ExtResource("1_4mtr3")]
+
+[node name="Player" parent="." instance=ExtResource("2_a8jvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.14952, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.886995, 0.46178, 0, -0.46178, 0.886995, 0, 50.7611, 52.7075)
