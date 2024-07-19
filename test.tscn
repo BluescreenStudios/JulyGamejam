@@ -8,7 +8,7 @@
 [node name="TestMap" parent="." instance=ExtResource("1_4mtr3")]
 
 [node name="Player" parent="." instance=ExtResource("2_a8jvi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.14952, 0)
+transform = Transform3D(1, 0.000522669, -0.00013962, -0.00052267, 1, -7.74394e-06, 0.000139617, 7.80337e-06, 1, 0, 9.14952, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.886995, 0.46178, 0, -0.46178, 0.886995, 0, 50.7611, 52.7075)
