@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cplfv1i8t6ify"]
+
+[ext_resource type="PackedScene" uid="uid://636d8wv4vvfb" path="res://TestMap.blend" id="1_1qlew"]
+
+[node name="TestMap" instance=ExtResource("1_1qlew")]
