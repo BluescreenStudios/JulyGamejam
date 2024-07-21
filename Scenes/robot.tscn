@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk8imb66my5l5"]
+
+[ext_resource type="PackedScene" uid="uid://ywfrqtb6s1wl" path="res://Scripts/robotjam_holdoutModel.glb" id="1_1l3vr"]
+
+[node name="robotjam_holdoutModel" instance=ExtResource("1_1l3vr")]
