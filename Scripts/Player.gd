@@ -10,7 +10,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
-func _unhandled_input(event):
+func _unhandled_input(event: InputEvent):
 	if Input.is_action_just_pressed("ui_menu"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		camera_should_move = false
