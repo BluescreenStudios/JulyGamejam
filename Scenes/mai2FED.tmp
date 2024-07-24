@@ -1,24 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cr4urvbafl3qr"]
+[gd_scene load_steps=4 format=3 uid="uid://cr4urvbafl3qr"]
 
-[ext_resource type="PackedScene" uid="uid://cll06clhq26v8" path="res://objects/FloorButton.tscn" id="1_64ohf"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://Scenes/player.tscn" id="2_a8jvi"]
-[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="2_kuw1h"]
+[ext_resource type="MeshLibrary" uid="uid://jv0oeuknbhfg" path="res://building-blocks-v1.tres" id="2_kuw1h"]
 [ext_resource type="PackedScene" uid="uid://vjgg2xo6i0vu" path="res://objects/BoxReal.tscn" id="3_qpgmt"]
-[ext_resource type="PackedScene" path="res://objects/bridge.tscn" id="5_f1oi0"]
-[ext_resource type="PackedScene" path="res://objects/Button_controller.tscn" id="6_lpy0d"]
-[ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="7_l47i3"]
 
 [node name="LevelProtos" type="Node3D"]
 
-[node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(-6.30319e-08, 0, 3.42122, 0, 2, 0, -1.442, 0, -1.49546e-07, 3.3972, 4.92334, -10.895)
-
-[node name="StaticBody3D" parent="Node3D" instance=ExtResource("5_f1oi0")]
-
 [node name="Player" parent="." instance=ExtResource("2_a8jvi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.10253, 7.01147, -9.36413)
-collision_layer = 2049
-collision_mask = 2049
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("2_kuw1h")
@@ -30,28 +19,7 @@ metadata/_editor_floor_ = Vector3(0, 7, 0)
 
 [node name="Box" parent="." instance=ExtResource("3_qpgmt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97167, 6.87042, -12.5733)
-collision_layer = 11
+freeze_mode = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.091884, 0.99577, 0, -0.99577, 0.091884, 0, 29.7778, -20.5856)
-
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.938932, 0.344102, 0, -0.344102, -0.938932, 0, 29.7778, -37.1199)
-
-[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.882718, 0.469903, 0, -0.469903, 0.882718, 0, 29.7778, -4.80769)
-
-[node name="ButtonGroup" type="Node" parent="."]
-
-[node name="FloorButton" parent="ButtonGroup" instance=ExtResource("1_64ohf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.26557, 5.03144, -6.44219)
-collision_layer = 8
-collision_mask = 8
-
-[node name="ButtonController" parent="." instance=ExtResource("6_lpy0d")]
-objects = [NodePath("../Node3D/StaticBody3D")]
-
-[node name="Killzone" parent="." instance=ExtResource("7_l47i3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1923, 2.28272, -19.5481)
-collision_layer = 2048
-collision_mask = 2048

@@ -22,7 +22,7 @@ func _unhandled_input(event: InputEvent):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		rotate_y(-event.relative.x * .005)
 		camera.rotate_x(-event.relative.y * .005)
-		camera.rotation.x = clamp(camera.rotation.x, -PI/2, PI/2)
+		camera.rotation.x = clamp(camera.rotation.x, -PI/2.5, PI/2.5)
 
 func _physics_process(delta):
 	# Add the gravity.
