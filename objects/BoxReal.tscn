@@ -12,6 +12,7 @@ material = SubResource("StandardMaterial3D_4iwrj")
 
 [node name="RigidBody3D" type="RigidBody3D"]
 collision_layer = 3
+can_sleep = false
 freeze_mode = 1
 script = ExtResource("1_hbtv0")
 
