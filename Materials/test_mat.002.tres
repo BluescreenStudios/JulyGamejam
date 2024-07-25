@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b5b8nxrcd8cqy"]
 
-[ext_resource type="Texture2D" uid="uid://b1hx02mlv7gt7" path="res://Scenes/BuildingBlocks_test_mat.png" id="1_6ms2q"]
+[ext_resource type="Texture2D" uid="uid://b1hx02mlv7gt7" path="res://Scenes/BodouildingBlocks_test_mat.png" id="1_6ms2q"]
 
 [resource]
 resource_name = "test_mat.002"
