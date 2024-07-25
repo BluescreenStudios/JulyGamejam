@@ -11,13 +11,14 @@ specular_color = Color(1, 0, 0, 1)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_8k00x")
+being_pulled = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_ugyo8")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.36465, -0.517367)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35271, -0.444626)
 
 [node name="CenterContainer" type="CenterContainer" parent="Camera3D"]
 anchors_preset = 15
@@ -30,8 +31,10 @@ grow_vertical = 2
 layout_mode = 2
 texture = SubResource("CanvasTexture_xnmli")
 
+[node name="Sprite3D" type="Sprite3D" parent="."]
+
 [node name="robotjam_holdoutModel" parent="." instance=ExtResource("2_g7ar1")]
-transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 0, 0, 0)
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
 
 [node name="Gadget" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.921959, -0.776381)

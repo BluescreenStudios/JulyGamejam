@@ -3,7 +3,6 @@ extends Node3D
 
 @export var objects = []
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	for button in buttons.get_children():
 		button.connect("activate", _on_button_activate)
@@ -11,7 +10,7 @@ func _ready():
 
 func _on_button_activate(id):
 	if id < objects.size():
-		var obj = get_node(objects[id])		
+		var obj = get_node(objects[id])
 		if obj:
 			var animation_player = obj.get_node("AnimationPlayer")
 			if animation_player:
