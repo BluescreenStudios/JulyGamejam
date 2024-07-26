@@ -69,8 +69,10 @@ func handle_grav():
 		Just_turned_grav = false
 		position.y += 2.5
 		global_rotate(Vector3(1, 0, 0), PI)
+		rotate_y(90)
 	elif not gravity_inverted and Just_turned_grav:
 		global_rotate(Vector3(1, 0, 0), PI)
+		rotate_y(90)
 		position.y -= 2.5
 		Just_turned_grav = false
 		

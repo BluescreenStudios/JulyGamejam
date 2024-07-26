@@ -18,5 +18,5 @@ func _on_area_3d_body_entered(body):
 	activate.emit(my_id)
 
 func _on_area_3d_body_exited(body):
-	animation_player.play("deactivate")
+	animation_player.play_backwards("activate")
 	deactivate.emit(my_id)
