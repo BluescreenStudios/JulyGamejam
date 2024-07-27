@@ -1,6 +1,8 @@
 extends Area3D
 
-@onready var timer = $Timer
+var current_spawn = 0
+var spawn_points = []
 
 func _on_body_entered(body):
-	get_tree().reload_current_scene()
+	if body is CharacterBody3D:
+		var spawn_point = spawn_points[current_spawn]

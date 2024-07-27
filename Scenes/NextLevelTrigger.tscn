@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://by0olgktlyvmv"]
+
+[ext_resource type="Script" path="res://Scripts/NextLevel.gd" id="1_lvht8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lkuy8"]
+size = Vector3(1, 2.41364, 1)
+
+[node name="NextLevelTrigger" type="Area3D"]
+collision_layer = 2048
+collision_mask = 2048
+script = ExtResource("1_lvht8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16116, 0)
+shape = SubResource("BoxShape3D_lkuy8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

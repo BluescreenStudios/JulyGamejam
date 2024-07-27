@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://deu3or8e7myp2"]
 
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_8k00x"]
-[ext_resource type="PackedScene" uid="uid://ywfrqtb6s1wl" path="res://Scripts/robotjam_holdoutModel.glb" id="2_g7ar1"]
-[ext_resource type="Script" path="res://Scripts/Gadget.gd" id="3_onx4w"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_2knqo"]
+[ext_resource type="PackedScene" uid="uid://ywfrqtb6s1wl" path="res://Scripts/robotjam_holdoutModel.glb" id="2_r07yw"]
+[ext_resource type="Script" path="res://Scripts/gadgets/Gadget.gd" id="3_cdrjd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ugyo8"]
 
@@ -10,14 +10,16 @@
 specular_color = Color(1, 0, 0, 1)
 
 [node name="Player" type="CharacterBody3D"]
-script = ExtResource("1_8k00x")
+collision_layer = 2049
+collision_mask = 2049
+script = ExtResource("1_2knqo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_ugyo8")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38177, -0.500938)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37674, -0.435897)
 
 [node name="CenterContainer" type="CenterContainer" parent="Camera3D"]
 anchors_preset = 15
@@ -30,18 +32,18 @@ grow_vertical = 2
 layout_mode = 2
 texture = SubResource("CanvasTexture_xnmli")
 
-[node name="robotjam_holdoutModel" parent="." instance=ExtResource("2_g7ar1")]
-transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 0, 0, 0)
+[node name="robotjam_holdoutModel" parent="." instance=ExtResource("2_r07yw")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
 
 [node name="Gadget" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.921959, -0.776381)
-script = ExtResource("3_onx4w")
+script = ExtResource("3_cdrjd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Gadget"]
 root_node = NodePath("../..")
 
 [node name="RayCast3D" type="RayCast3D" parent="Gadget"]
 transform = Transform3D(1, 0, 0, 0, 400, 0, 0, 0, 1, 0, 0, 0)
-collision_mask = 2
+collision_mask = 96
 collide_with_areas = true
 debug_shape_custom_color = Color(0.787542, 4.16331e-06, 5.77569e-07, 1)

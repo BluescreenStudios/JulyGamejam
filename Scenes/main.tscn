@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cr4urvbafl3qr"]
 
 [ext_resource type="PackedScene" uid="uid://cll06clhq26v8" path="res://objects/FloorButton.tscn" id="1_64ohf"]
-[ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://Scenes/player.tscn" id="2_a8jvi"]
+[ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_a8jvi"]
 [ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="2_kuw1h"]
 [ext_resource type="PackedScene" uid="uid://vjgg2xo6i0vu" path="res://objects/BoxReal.tscn" id="3_qpgmt"]
 [ext_resource type="PackedScene" uid="uid://cftel282k4rfn" path="res://objects/bridge.tscn" id="5_f1oi0"]
@@ -18,8 +18,6 @@ transform = Transform3D(-6.30319e-08, 0, 3.42122, 0, 2, 0, -1.442, 0, -1.49546e-
 
 [node name="Player" parent="." instance=ExtResource("2_a8jvi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.10253, 7.01147, -9.36413)
-collision_layer = 2049
-collision_mask = 2049
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("2_kuw1h")
