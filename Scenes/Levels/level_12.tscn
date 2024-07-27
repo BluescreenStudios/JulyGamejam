@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvska6fa3qrsx"]
+
+[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_7ekia"]
+
+[node name="level_12" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("1_7ekia")
+cell_size = Vector3(1, 1, 1)
