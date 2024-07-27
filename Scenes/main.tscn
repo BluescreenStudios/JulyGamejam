@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cll06clhq26v8" path="res://objects/FloorButton.tscn" id="1_64ohf"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://Scenes/player.tscn" id="2_a8jvi"]
-[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://Materials/building-blocks-v1.tres" id="2_kuw1h"]
+[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="2_kuw1h"]
 [ext_resource type="PackedScene" uid="uid://vjgg2xo6i0vu" path="res://objects/BoxReal.tscn" id="3_qpgmt"]
 [ext_resource type="PackedScene" uid="uid://cftel282k4rfn" path="res://objects/bridge.tscn" id="5_f1oi0"]
 [ext_resource type="PackedScene" uid="uid://bepei6q68hmr1" path="res://objects/Button_controller.tscn" id="6_lpy0d"]

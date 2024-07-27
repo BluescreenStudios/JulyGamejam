@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://26r0exse8tau"]
 
-[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://Materials/building-blocks-v1.tres" id="1_i7brc"]
+[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_i7brc"]
 
 [node name="2-1" type="Node3D"]
 transform = Transform3D(0.472505, 0, 0, 0, 0.472505, 0, 0, 0, 0.582248, 0, 0, 0)
