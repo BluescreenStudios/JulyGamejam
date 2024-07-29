@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dd712fnh4xowr"]
 
-[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_15c5o"]
-[ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://Scenes/player.tscn" id="2_4w2i2"]
+[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://Scenes/building-blocks-v1.tres" id="1_15c5o"]
+[ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_4w2i2"]
 
 [node name="level_8" type="Node3D"]
 

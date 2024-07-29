@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://26r0exse8tau"]
 
-[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_i7brc"]
+[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://Scenes/building-blocks-v1.tres" id="1_i7brc"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_cdkc4"]
 
 [node name="2-1" type="Node3D"]
@@ -20,4 +20,4 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 3, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_cdkc4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.9021, 4.15832, -1.88512)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -38, -2.116, -7)

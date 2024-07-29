@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://b17kue2d4nww3"]
+
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_8dlqn"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8dlqn")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(30.3039, 14.7627)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Boot" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Shut Down" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Boot" to="." method="_on_boot_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Shut Down" to="." method="_on_shut_down_pressed"]

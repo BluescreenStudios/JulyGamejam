@@ -1,0 +1,113 @@
+[gd_scene load_steps=2 format=3 uid="uid://cejo3fnly6ekw"]
+
+[ext_resource type="Script" path="res://Scripts/settings.gd" id="1_ive24"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ive24")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(700, 100)
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 700, 100)
+
+[node name="Music" type="HSlider" parent="CanvasLayer"]
+offset_top = 54.0
+offset_right = 127.0
+offset_bottom = 70.0
+ticks_on_borders = true
+
+[node name="Music Volume" type="Label" parent="CanvasLayer/Music"]
+layout_mode = 2
+offset_top = -27.0
+offset_right = 125.0
+offset_bottom = -4.0
+text = "Music"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Volume Settings" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Volume Settings"
+
+[node name="Master Volume" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Master"
+
+[node name="Master" type="HSlider" parent="MarginContainer/VBoxContainer/Master Volume"]
+layout_mode = 2
+offset_left = 58.0
+offset_top = 27.0
+offset_right = 66.0
+offset_bottom = 43.0
+size_flags_horizontal = 4
+ticks_on_borders = true
+
+[node name="SFX" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+ticks_on_borders = true
+
+[node name="SFX Volume" type="Label" parent="MarginContainer/VBoxContainer/SFX"]
+layout_mode = 2
+offset_left = -28.0
+offset_top = -24.0
+offset_right = 97.0
+offset_bottom = -1.0
+text = "SFX"
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Brightness" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Brightness2" type="Label" parent="MarginContainer/VBoxContainer/Brightness"]
+layout_mode = 2
+offset_top = 32.0
+offset_right = 125.0
+offset_bottom = 55.0
+text = "Brightness"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Resolution" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Brightness"
+
+[node name="Video" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Video Settings
+"
+
+[node name="Resolutions" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 3
+selected = 2
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+
+[connection signal="value_changed" from="CanvasLayer/Music" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Music" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Master Volume/Master" to="." method="_on_master_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Master Volume/Master" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/SFX" to="." method="_on_sfx_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/SFX" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
