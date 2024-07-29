@@ -1,4 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://rs0i8ttpspjg"]
+[gd_scene load_steps=3 format=3 uid="uid://rs0i8ttpspjg"]
+
+[sub_resource type="GDScript" id="GDScript_os1ce"]
+script/source = "extends Area3D
+
+@export var id = 0
+
+signal activate(id)
+
+func _on_body_entered(body):
+	activate.emit(id)
+"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k856u"]
 size = Vector3(4.59327, 0.766724, 5.18116)
@@ -7,6 +18,7 @@ size = Vector3(4.59327, 0.766724, 5.18116)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.096632, 0.138424, -0.138961)
 collision_layer = 32768
 collision_mask = 32768
+script = SubResource("GDScript_os1ce")
 
 [node name="Timer" type="Timer" parent="."]
 

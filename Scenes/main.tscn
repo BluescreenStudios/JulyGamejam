@@ -29,7 +29,6 @@ metadata/_editor_floor_ = Vector3(0, 10, 0)
 
 [node name="Box" parent="." instance=ExtResource("3_qpgmt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97167, 6.87042, -12.4656)
-collision_layer = 11
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.091884, 0.99577, 0, -0.99577, 0.091884, 0, 29.7778, -20.5856)
@@ -57,7 +56,6 @@ collision_mask = 2048
 
 [node name="StaticBoxToPullToo" parent="." instance=ExtResource("8_djnlv")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.2025, 5.98916, -33.6253)
-collision_layer = 3
 
 [node name="RigidBody3D" parent="." instance=ExtResource("3_qpgmt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5633, 6.58252, -7.83473)

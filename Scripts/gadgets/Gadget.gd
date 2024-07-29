@@ -7,6 +7,8 @@ enum GadgetMode { MAGNET, GRAVITY, FREEZERAY, DUPLICATOR }
 @onready var ray: RayCast3D = $RayCast3D
 @onready var camera = $"../Camera3D"
 var player
+var level
+
 var magnet_gun: MagnetGun
 var grav_gun: GravityGun
 var freeze_gun: FreezeGun
@@ -14,6 +16,7 @@ var Duper: Duplicator
 
 func _ready():
 	player = $".."
+	level = player.level
 	magnet_gun = MagnetGun.new(ray, camera, player)
 	freeze_gun = FreezeGun.new(ray)
 	grav_gun = GravityGun.new(ray, player)
@@ -29,8 +32,6 @@ func handle_gadget_alt_fire():
 			magnet_gun.handle_alt_fire()
 		GadgetMode.GRAVITY:
 			grav_gun.handle_alt_fire()
-		GadgetMode.DUPLICATOR:
-			pass
 
 func handle_gadget_fire():
 	match CurrentMode:
@@ -53,11 +54,14 @@ func handle_gadget_swap(event: InputEvent):
 			"1":
 				CurrentMode = GadgetMode.MAGNET
 			"2":
-				CurrentMode = GadgetMode.DUPLICATOR
+				if level > 2:
+					CurrentMode = GadgetMode.DUPLICATOR
 			"3":
-				CurrentMode = GadgetMode.FREEZERAY
+				if level > 4:
+					CurrentMode = GadgetMode.FREEZERAY
 			"4":
-				CurrentMode = GadgetMode.GRAVITY
+				if level > 7:
+					CurrentMode = GadgetMode.GRAVITY
 
 
 func switch_out_animation():

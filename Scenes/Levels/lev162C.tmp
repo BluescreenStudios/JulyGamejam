@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bopwwmed2g8pm"]
+[gd_scene load_steps=14 format=3 uid="uid://bopwwmed2g8pm"]
 
 [ext_resource type="PackedScene" uid="uid://cu872qgx7hau3" path="res://objects/Respawner.tscn" id="1_awf3x"]
 [ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_pi475"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://vjgg2xo6i0vu" path="res://objects/BoxReal.tscn" id="11_44k8i"]
 [ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="12_orxwt"]
 [ext_resource type="Script" path="res://Scenes/levels/Ball_spawner.gd" id="13_nxmqo"]
-[ext_resource type="PackedScene" uid="uid://by0olgktlyvmv" path="res://Scenes/NextLevelTrigger.tscn" id="14_72cm1"]
 
 [node name="Level" type="Node3D"]
 
@@ -35,6 +34,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02457, 2.39259, 14.8688)
 [node name="Spawn2" type="Node3D" parent="Respawners"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02457, 3.04829, 29.8371)
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.998542, 0.00132618, -0.0539723, -0.00121135, 0.999997, 0.00216029, 0.053975, -0.00209176, 0.99854, 0.775828, 0.134483, -0.358114)
+
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -1.02854, -1.02063, 0.0526351)
 mesh_library = ExtResource("1_pi475")
@@ -45,13 +47,13 @@ data = {
 metadata/_editor_floor_ = Vector3(0, -4, 100)
 
 [node name="Player" parent="." instance=ExtResource("2_bomgq")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.17939, 0.667012, 0.0212355)
-collision_layer = 34881
-collision_mask = 34881
-level = 1
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.67959, 2.48164, 29.9106)
+collision_layer = 34817
+collision_mask = 34817
 
 [node name="StaticBoxToPullToo" parent="." instance=ExtResource("4_jbwtd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.201, 1.48054, 10.7988)
+collision_layer = 3
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.898999, 8.90609, 18.7959)
@@ -108,19 +110,3 @@ collision_mask = 192
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.454194, 7.15365, 29.6785)
 script = ExtResource("13_nxmqo")
 object = NodePath("../Ball")
-
-[node name="NextLevelTrigger" parent="." instance=ExtResource("14_72cm1")]
-transform = Transform3D(4.03121, 0, 0, 0, 1.5495, 0, 0, 0, 1.90419, -1.15083, -4.02063, 45.1357)
-current_level = 1
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.487, 6.70686)
-omni_range = 4096.0
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.487, 19.7887)
-omni_range = 4096.0
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42506, 36.441)
-omni_range = 4096.0

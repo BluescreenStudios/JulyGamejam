@@ -1,7 +1,7 @@
 extends Node
 
 class_name FreezeGun
-
+var level
 var frozen_item: RigidBody3D
 
 var ray: RayCast3D
