@@ -1,11 +1,6 @@
-<<<<<<< HEAD
+[gd_scene load_steps=9 format=3 uid="uid://djtgmmrl2mtk2"]
 
 [ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://Scenes/building-blocks-v1.tres" id="1_sxdxa"]
-
-[gd_scene load_steps=9 format=3 uid="uid://djtgmmrl2mtk2"]
-=======
-[gd_scene load_steps=10 format=3 uid="uid://djtgmmrl2mtk2"]
->>>>>>> 004d98b1294f8e99d4967cb737535de91658daa8
 
 [ext_resource type="PackedScene" uid="uid://cll06clhq26v8" path="res://objects/FloorButton.tscn" id="2_y0kg5"]
 [ext_resource type="PackedScene" uid="uid://bepei6q68hmr1" path="res://objects/Button_controller.tscn" id="3_6c7ke"]

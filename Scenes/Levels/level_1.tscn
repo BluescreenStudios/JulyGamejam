@@ -11,11 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dp3cxnaaccix3" path="res://objects/Ball.tscn" id="10_kkrkw"]
 [ext_resource type="PackedScene" uid="uid://vjgg2xo6i0vu" path="res://objects/BoxReal.tscn" id="11_44k8i"]
 [ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="12_orxwt"]
-<<<<<<< HEAD
-=======
 [ext_resource type="Script" path="res://Scenes/levels/Ball_spawner.gd" id="13_nxmqo"]
-[ext_resource type="PackedScene" uid="uid://xm5qw5fcgve" path="res://Scenes/next_level.tscn" id="14_jkmsj"]
->>>>>>> 004d98b1294f8e99d4967cb737535de91658daa8
 
 [node name="Level" type="Node3D"]
 
@@ -90,10 +86,9 @@ collision_mask = 67
 [node name="RigidBody3D" parent="." instance=ExtResource("11_44k8i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85662, 25.9335)
 
-<<<<<<< HEAD
 [node name="Killzone" parent="." instance=ExtResource("12_orxwt")]
 transform = Transform3D(1.2, 0, 0, 0, -1.2, 1.04907e-07, 0, -1.04907e-07, -1.2, -1.07366, -2.19126, 18.2436)
-=======
+
 [node name="Ball" parent="." instance=ExtResource("10_kkrkw")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.358023, 7.27997, 29.8486)
 collision_layer = 192
@@ -115,8 +110,3 @@ omni_range = 4096.0
 [node name="OmniLight3D4" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42506, 36.441)
 omni_range = 4096.0
-
-[node name="NextLevel" parent="." instance=ExtResource("14_jkmsj")]
-transform = Transform3D(2.16789, 0, 0, 0, 1.76109, 0, 0, 0, 1.93727, -1.27308, -2.98877, 44.9398)
-current_level = 1
->>>>>>> 004d98b1294f8e99d4967cb737535de91658daa8
