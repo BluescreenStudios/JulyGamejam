@@ -1,6 +1,12 @@
-extends AnimatableBody3D
+extends Node3D
+
+@export var active = false
+@onready var anim = $Platform/AnimationPlayer
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
-	pass
+	if active:
+		anim.play("activate")
+	else:
+		anim.play_backwards("activate")

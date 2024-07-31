@@ -22,6 +22,12 @@ window/size/viewport_height=1080
 window/size/mode=2
 window/stretch/mode="viewport"
 
+[importer_defaults]
+
+animation_library={
+"gltf/embedded_image_handling": 0
+}
+
 [input]
 
 ui_left={
