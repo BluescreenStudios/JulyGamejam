@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://26r0exse8tau"]
 
 [ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_i7brc"]
-[ext_resource type="PackedScene" path="res://objects/Respawner.tscn" id="1_jconr"]
+[ext_resource type="PackedScene" uid="uid://cu872qgx7hau3" path="res://objects/Respawner.tscn" id="1_jconr"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_cdkc4"]
 [ext_resource type="PackedScene" uid="uid://cen4gjfisvlfu" path="res://objects/StaticBoxToPullToo.tscn" id="3_xb6wr"]
 [ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="5_ojsgt"]
