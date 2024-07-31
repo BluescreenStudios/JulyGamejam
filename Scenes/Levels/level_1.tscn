@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bopwwmed2g8pm"]
+[gd_scene load_steps=16 format=3 uid="uid://bopwwmed2g8pm"]
 
 [ext_resource type="PackedScene" uid="uid://cu872qgx7hau3" path="res://objects/Respawner.tscn" id="1_awf3x"]
 [ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_pi475"]
@@ -13,7 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://vjgg2xo6i0vu" path="res://objects/BoxReal.tscn" id="11_44k8i"]
 [ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="12_orxwt"]
 [ext_resource type="Script" path="res://Scenes/levels/Ball_spawner.gd" id="13_nxmqo"]
-[ext_resource type="PackedScene" uid="uid://by0olgktlyvmv" path="res://Scenes/NextLevelTrigger.tscn" id="14_72cm1"]
+[ext_resource type="PackedScene" uid="uid://xm5qw5fcgve" path="res://Scenes/next_level.tscn" id="14_jkmsj"]
+[ext_resource type="Script" path="res://Scripts/NextLevel.gd" id="15_maa4n"]
 
 [node name="Level" type="Node3D"]
 
@@ -109,10 +110,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.454194, 7.15365, 29.6785)
 script = ExtResource("13_nxmqo")
 object = NodePath("../Ball")
 
-[node name="NextLevelTrigger" parent="." instance=ExtResource("14_72cm1")]
-transform = Transform3D(4.03121, 0, 0, 0, 1.5495, 0, 0, 0, 1.90419, -1.15083, -4.02063, 45.1357)
-current_level = 1
-
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.487, 6.70686)
 omni_range = 4096.0
@@ -124,3 +121,8 @@ omni_range = 4096.0
 [node name="OmniLight3D4" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42506, 36.441)
 omni_range = 4096.0
+
+[node name="NextLevel" parent="." instance=ExtResource("14_jkmsj")]
+transform = Transform3D(2.16789, 0, 0, 0, 1.76109, 0, 0, 0, 1.93727, -1.27308, -2.98877, 44.9398)
+script = ExtResource("15_maa4n")
+current_level = 1
