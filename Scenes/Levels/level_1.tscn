@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bopwwmed2g8pm"]
+[gd_scene load_steps=15 format=3 uid="uid://bopwwmed2g8pm"]
 
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_bomgq"]
 [ext_resource type="PackedScene" uid="uid://cen4gjfisvlfu" path="res://objects/StaticBoxToPullToo.tscn" id="4_jbwtd"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="12_orxwt"]
 [ext_resource type="AudioStream" uid="uid://d0cxwvcfaa4sw" path="res://BSOD Audio/A2-0002_BSODaudiopostedit00087047.ogg" id="13_fg70l"]
 [ext_resource type="Script" path="res://Scenes/levels/Ball_spawner.gd" id="13_nxmqo"]
+[ext_resource type="AudioStream" uid="uid://bk1l5ueqnlbh2" path="res://1 - sys.t3m - clandestine transcendence (extended).ogg" id="14_dw5hx"]
 
 [node name="Level" type="Node3D"]
 
@@ -108,4 +109,7 @@ transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -1, 3, 11)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_fg70l")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_dw5hx")
 autoplay = true

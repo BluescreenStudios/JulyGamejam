@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cts4b2a30mgh0"
+path="res://.godot/imported/5 - sys.t3m - public aggression.ogg-f8ce4326ecc23d25dc9da5e05653ecb3.oggvorbisstr"
+
+[deps]
+
+source_file="res://5 - sys.t3m - public aggression.ogg"
+dest_files=["res://.godot/imported/5 - sys.t3m - public aggression.ogg-f8ce4326ecc23d25dc9da5e05653ecb3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

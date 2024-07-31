@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cv6jpbx6o88q7"
+path="res://.godot/imported/4 - sys.t3m - pace.ogg-ef3cf0fdd086f7a1e4c136501d0a0b50.oggvorbisstr"
+
+[deps]
+
+source_file="res://4 - sys.t3m - pace.ogg"
+dest_files=["res://.godot/imported/4 - sys.t3m - pace.ogg-ef3cf0fdd086f7a1e4c136501d0a0b50.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

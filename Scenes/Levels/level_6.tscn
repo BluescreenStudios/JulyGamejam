@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ca56lg3h6ftfs"]
+[gd_scene load_steps=13 format=3 uid="uid://ca56lg3h6ftfs"]
 
 [ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_my4af"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_7baik"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cen4gjfisvlfu" path="res://objects/StaticBoxToPullToo.tscn" id="4_1id0w"]
 [ext_resource type="PackedScene" uid="uid://cll06clhq26v8" path="res://objects/FloorButton.tscn" id="5_hug6l"]
 [ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="6_36ada"]
+[ext_resource type="AudioStream" uid="uid://cts4b2a30mgh0" path="res://5 - sys.t3m - public aggression.ogg" id="8_oabdx"]
 
 [sub_resource type="Animation" id="Animation_07q87"]
 resource_name = "moving"
@@ -58,9 +59,6 @@ metadata/_editor_floor_ = Vector3(0, 7, 0)
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0)
 level = 6
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player"]
-stream = ExtResource("3_0kb3t")
-
 [node name="RigidBody3D" parent="." instance=ExtResource("3_rno3w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, 1)
 
@@ -102,3 +100,9 @@ omni_range = 4096.0
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9936, 6.41693, -16.5996)
 omni_range = 4096.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0kb3t")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_oabdx")

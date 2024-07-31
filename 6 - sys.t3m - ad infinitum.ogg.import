@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ch7om5awxsmtw"
+path="res://.godot/imported/6 - sys.t3m - ad infinitum.ogg-9bd56bb9bbdc806b6914625582173099.oggvorbisstr"
+
+[deps]
+
+source_file="res://6 - sys.t3m - ad infinitum.ogg"
+dest_files=["res://.godot/imported/6 - sys.t3m - ad infinitum.ogg-9bd56bb9bbdc806b6914625582173099.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

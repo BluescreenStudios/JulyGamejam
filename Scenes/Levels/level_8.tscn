@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dd712fnh4xowr"]
+[gd_scene load_steps=8 format=3 uid="uid://dd712fnh4xowr"]
 
 [ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_15c5o"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_4w2i2"]
 [ext_resource type="AudioStream" uid="uid://cf2hhi1uqwvfe" path="res://BSOD Audio/A2-0008_BSODaudiopostedit00089719.ogg" id="3_dd6u6"]
 [ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="4_c4hhn"]
+[ext_resource type="AudioStream" uid="uid://ch7om5awxsmtw" path="res://6 - sys.t3m - ad infinitum.ogg" id="4_yuaoc"]
 [ext_resource type="PackedScene" uid="uid://vjgg2xo6i0vu" path="res://objects/BoxReal.tscn" id="5_u8nin"]
 [ext_resource type="PackedScene" uid="uid://o1ah511tvv7r" path="res://Materials/button.glb" id="6_oc08j"]
 
@@ -25,7 +26,9 @@ level = 8
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_dd6u6")
-autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yuaoc")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.56133, 8.77596, 0.259813)

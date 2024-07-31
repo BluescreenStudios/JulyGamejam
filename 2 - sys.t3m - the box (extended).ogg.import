@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d4a3nht3v5ovm"
+path="res://.godot/imported/2 - sys.t3m - the box (extended).ogg-525f67500ae7893e9343b93b57ead12a.oggvorbisstr"
+
+[deps]
+
+source_file="res://2 - sys.t3m - the box (extended).ogg"
+dest_files=["res://.godot/imported/2 - sys.t3m - the box (extended).ogg-525f67500ae7893e9343b93b57ead12a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
