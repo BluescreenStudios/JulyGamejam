@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b17kue2d4nww3"]
+[gd_scene load_steps=11 format=3 uid="uid://b17kue2d4nww3"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_8dlqn"]
 [ext_resource type="Texture2D" uid="uid://banofyg0dvi5x" path="res://download.png" id="2_vtwql"]
@@ -15,10 +15,6 @@ bg_color = Color(0.333333, 0.333333, 0.333333, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7yfw"]
 bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_i5aa1"]
-default_font = ExtResource("2_w8qx4")
-default_font_size = 20
 
 [sub_resource type="FontVariation" id="FontVariation_a8jkl"]
 base_font = ExtResource("2_w8qx4")
@@ -72,7 +68,6 @@ icon_alignment = 1
 
 [node name="Levels" type="MenuButton" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_i5aa1")
 theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
 theme_override_fonts/font = SubResource("FontVariation_a8jkl")
@@ -82,7 +77,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_tltgy")
 text = "Levels"
 flat = false
 item_count = 13
-popup/item_0/text = "Level 1"
+popup/item_0/text = "Level !"
 popup/item_0/id = 0
 popup/item_1/text = "Level 2"
 popup/item_1/id = 1
@@ -102,9 +97,9 @@ popup/item_8/text = "Level 9"
 popup/item_8/id = 8
 popup/item_9/text = "Level 10"
 popup/item_9/id = 9
-popup/item_10/text = "Level 11"
+popup/item_10/text = "Level !1"
 popup/item_10/id = 10
-popup/item_11/text = "Level 12"
+popup/item_11/text = "Level !2"
 popup/item_11/id = 11
 popup/item_12/text = "Boss"
 popup/item_12/id = 12

@@ -13,3 +13,4 @@ func _on_levels_pressed():
 
 func _on_power_off_pressed():
 	get_tree().quit()
+	

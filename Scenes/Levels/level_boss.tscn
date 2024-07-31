@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://deg727dawt0nw"]
 
-[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://Scenes/building-blocks-v1.tres" id="1_lt02r"]
+[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_lt02r"]
 
 [node name="level_boss" type="Node3D"]
 

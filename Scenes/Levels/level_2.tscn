@@ -1,13 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://26r0exse8tau"]
 
-[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://Scenes/building-blocks-v1.tres" id="1_i7brc"]
-
-[ext_resource type="PackedScene" uid="uid://cu872qgx7hau3" path="res://objects/Respawner.tscn" id="1_jconr"]
-
+[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_i7brc"]
+[ext_resource type="PackedScene" path="res://objects/Respawner.tscn" id="1_jconr"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_cdkc4"]
 [ext_resource type="PackedScene" uid="uid://cen4gjfisvlfu" path="res://objects/StaticBoxToPullToo.tscn" id="3_xb6wr"]
 [ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="5_ojsgt"]
-[ext_resource type="PackedScene" uid="uid://xm5qw5fcgve" path="res://Scenes/next_level.tscn" id="6_mjwgq"]
+[ext_resource type="PackedScene" path="res://Scenes/next_level.tscn" id="6_mjwgq"]
 
 [node name="2-1" type="Node3D"]
 transform = Transform3D(0.472505, 0, 0, 0, 0.472505, 0, 0, 0, 0.582248, 0, 0, 0)
