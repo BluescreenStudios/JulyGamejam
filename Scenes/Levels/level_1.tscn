@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bopwwmed2g8pm"]
+[gd_scene load_steps=15 format=3 uid="uid://bopwwmed2g8pm"]
 
 [ext_resource type="PackedScene" uid="uid://cu872qgx7hau3" path="res://objects/Respawner.tscn" id="1_awf3x"]
 [ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_pi475"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="12_orxwt"]
 [ext_resource type="Script" path="res://Scenes/levels/Ball_spawner.gd" id="13_nxmqo"]
 [ext_resource type="PackedScene" uid="uid://xm5qw5fcgve" path="res://Scenes/next_level.tscn" id="14_jkmsj"]
-[ext_resource type="Script" path="res://Scripts/NextLevel.gd" id="15_maa4n"]
 
 [node name="Level" type="Node3D"]
 
@@ -124,5 +123,4 @@ omni_range = 4096.0
 
 [node name="NextLevel" parent="." instance=ExtResource("14_jkmsj")]
 transform = Transform3D(2.16789, 0, 0, 0, 1.76109, 0, 0, 0, 1.93727, -1.27308, -2.98877, 44.9398)
-script = ExtResource("15_maa4n")
 current_level = 1
