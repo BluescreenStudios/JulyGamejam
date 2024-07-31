@@ -10,6 +10,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var gravity_inverted = gravity < 0
 var grounded
 var inverse = 1
+@export var level: int
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -61,18 +62,20 @@ func handle_grav():
 	inverse = 1
 	if gravity_inverted:
 		inverse = -1
-		
+
 	gravity_inverted = gravity < 0
 	grounded = (is_on_floor() and not gravity_inverted) or (is_on_ceiling() and gravity_inverted)
 	
 	if gravity_inverted and Just_turned_grav:
 		Just_turned_grav = false
 		position.y += 2.5
+		var before = rotation.y
 		global_rotate(Vector3(1, 0, 0), PI)
-		rotate_y(90)
+		rotation.y = before
 	elif not gravity_inverted and Just_turned_grav:
+		var before = rotation.y
 		global_rotate(Vector3(1, 0, 0), PI)
-		rotate_y(90)
+		rotation.y = before
 		position.y -= 2.5
 		Just_turned_grav = false
 		

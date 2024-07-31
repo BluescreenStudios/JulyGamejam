@@ -11,19 +11,19 @@ var previous_grav_value
 @onready var ray : RayCast3D
 @onready var camera : Camera3D
 var player
+var level
 
 func _init(_ray: RayCast3D, _camera: Camera3D, _player):
-	print(player)
 	ray = _ray
 	camera = _camera
 	player = _player
 	
 func handle_alt_fire():
-	if ray.is_colliding() or pull_towards_obj:
+	if ray.is_colliding():
 		if not pull_towards_obj:
 			var obj = ray.get_collider()
-			print ()
-			if obj is StaticBody3D or obj.get_collision_layer() != 64:
+			print(obj.get_collision_layer())
+			if obj is StaticBody3D or obj.get_collision_layer() == 193:
 				player.being_pulled = true
 				pull_towards_obj = obj
 			else:
@@ -94,17 +94,20 @@ func _process(delta):
 		previous_position = physics_moving_object.global_transform.origin
 		physics_moving_object.position += motion
 		physics_moving_object.move_and_collide(motion)
+	if not is_instance_valid(pull_towards_obj):
+		pull_towards_obj = null
+		player.being_pulled = false
 		
 	if pull_towards_obj:
 		var target = pull_towards_obj.global_transform.origin
 		var difference = target - player.global_transform.origin
 		var distance = player.global_transform.origin.distance_to(target)
-		
-		if difference.y < 3:
+
+		if abs(difference.y) < 1:
 			difference.y = 0
-		if difference.x < 2:
+		if abs(difference.x) < 1:
 			difference.x = 0
-		if difference.z < 2:
+		if abs(difference.z) < 1:
 			difference.z = 0
 		
 		var direction = difference.normalized()
@@ -112,6 +115,7 @@ func _process(delta):
 		var pull_speed = 10.0
 		if distance > 1.5:
 			player.velocity = direction * pull_speed
+			print(player.velocity)
 			player.move_and_slide()
 
 
