@@ -22,6 +22,26 @@ func _ready():
 			level = preload("res://Scenes/levels/level_2.tscn")
 		3:
 			level = preload("res://Scenes/levels/level_3.tscn")
+		4:
+			level = preload("res://Scenes/levels/level_4.tscn")
+		5:
+			level = preload("res://Scenes/levels/level_5.tscn")
+		6:
+			level = preload("res://Scenes/levels/level_6.tscn")
+		7:
+			level = preload("res://Scenes/levels/level_7.tscn")
+		8:
+			level = preload("res://Scenes/levels/level_8.tscn")
+		9:
+			level = preload("res://Scenes/levels/level_9.tscn")
+		10:
+			level = preload("res://Scenes/levels/level_10.tscn")
+		11:
+			level = preload("res://Scenes/levels/level_11.tscn")
+		12:
+			level = preload("res://Scenes/levels/level_12.tscn")
+		13:
+			level = preload("res://Scenes/Levels/level_boss.tscn")
 
 func _process(delta):
 	pass

@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://djtgmmrl2mtk2"]
+[gd_scene load_steps=13 format=3 uid="uid://djtgmmrl2mtk2"]
 
 [ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_sxdxa"]
 [ext_resource type="PackedScene" uid="uid://cll06clhq26v8" path="res://objects/FloorButton.tscn" id="2_y0kg5"]
 [ext_resource type="PackedScene" uid="uid://bepei6q68hmr1" path="res://objects/Button_controller.tscn" id="3_6c7ke"]
 [ext_resource type="PackedScene" uid="uid://vjgg2xo6i0vu" path="res://objects/BoxReal.tscn" id="4_41khj"]
-[ext_resource type="PackedScene" uid="uid://cu872qgx7hau3" path="res://objects/Respawner.tscn" id="4_f1d14"]
+[ext_resource type="PackedScene" path="res://objects/Respawner.tscn" id="4_f1d14"]
 [ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="5_5gu6d"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="5_vks7d"]
 [ext_resource type="Script" path="res://objects/Platform.gd" id="8_44dhs"]
 [ext_resource type="PackedScene" uid="uid://cb85di0fxbqb4" path="res://objects/Platform.tscn" id="8_mwq6c"]
-[ext_resource type="PackedScene" uid="uid://du8vjfmc74oqi" path="res://Scenes/Door.tscn" id="10_f1mro"]
-[ext_resource type="PackedScene" uid="uid://bsew73nqt4irn" path="res://Scenes/twobuttondoorcontroller.tscn" id="11_y1mv4"]
+[ext_resource type="PackedScene" uid="uid://ciu7yefya32hv" path="res://Scenes/Door.tscn" id="10_f1mro"]
+[ext_resource type="PackedScene" path="res://Scenes/twobuttondoorcontroller.tscn" id="11_y1mv4"]
+[ext_resource type="AudioStream" uid="uid://bouhhb8boxqro" path="res://BSOD Audio/A2-0004_BSODaudiopostedit00087896.ogg" id="12_bm14e"]
 
 [node name="Level_3" type="Node3D"]
 
@@ -100,12 +101,15 @@ button1 = NodePath("FloorButton")
 button2 = NodePath("FloorButton2")
 
 [node name="FloorButton2" parent="Twobuttondoorcontroller" instance=ExtResource("2_y0kg5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.07257, 4.06559, 2.97748)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4.09, 3)
 collision_layer = 2
 collision_mask = 2
 my_id = 1
 
 [node name="FloorButton" parent="Twobuttondoorcontroller" instance=ExtResource("2_y0kg5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9394, 4.19029, -2.97158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4.09, -3)
 collision_layer = 2
 collision_mask = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_bm14e")

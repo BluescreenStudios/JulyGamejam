@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5nfm3q4vy2ib"]
 
-[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://Scenes/building-blocks-v1.tres" id="1_arpws"]
+[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_arpws"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_bq0l0"]
 
 [node name="level_11" type="Node3D"]

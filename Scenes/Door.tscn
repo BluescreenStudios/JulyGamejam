@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://du8vjfmc74oqi"]
+[gd_scene load_steps=6 format=3 uid="uid://ciu7yefya32hv"]
 
 [ext_resource type="Script" path="res://Scenes/Door.gd" id="1_78txa"]
 
@@ -32,7 +32,7 @@ _data = {
 script = ExtResource("1_78txa")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.508139, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.618765, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.510976, 0.494483, 0.136832)

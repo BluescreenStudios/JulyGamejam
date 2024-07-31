@@ -1,7 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://cifqr0y1l14e"]
+[gd_scene load_steps=13 format=3 uid="uid://cifqr0y1l14e"]
 
-[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://Scenes/building-blocks-v1.tres" id="1_x5oqm"]
+[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_x5oqm"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_xqxib"]
+[ext_resource type="PackedScene" uid="uid://vjgg2xo6i0vu" path="res://objects/BoxReal.tscn" id="3_oxus5"]
+[ext_resource type="PackedScene" uid="uid://cll06clhq26v8" path="res://objects/FloorButton.tscn" id="4_iketi"]
+[ext_resource type="PackedScene" uid="uid://cen4gjfisvlfu" path="res://objects/StaticBoxToPullToo.tscn" id="5_rcvmm"]
+[ext_resource type="PackedScene" uid="uid://ciu7yefya32hv" path="res://Scenes/Door.tscn" id="6_37j50"]
+[ext_resource type="PackedScene" path="res://Scenes/next_level.tscn" id="6_sp1to"]
+[ext_resource type="PackedScene" path="res://Scenes/twobuttondoorcontroller.tscn" id="7_36mru"]
+[ext_resource type="PackedScene" uid="uid://rs0i8ttpspjg" path="res://Scenes/killzone.tscn" id="9_cf14x"]
+
+[sub_resource type="Animation" id="Animation_gr85o"]
+resource_name = "moving"
+loop_mode = 2
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 8, 7, 5, 1, 1, 12, 7, 5)
+
+[sub_resource type="Animation" id="Animation_i3ilc"]
+resource_name = "moving2"
+loop_mode = 2
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../StaticBoxToPullToo2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 14, 9, 10, 1, 1, 8, 9, 10)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u4c3j"]
+_data = {
+"moving": SubResource("Animation_gr85o"),
+"moving2": SubResource("Animation_i3ilc")
+}
 
 [node name="level_4" type="Node3D"]
 
@@ -18,3 +53,65 @@ metadata/_editor_floor_ = Vector3(1, 8, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_xqxib")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0)
+level = 4
+
+[node name="RigidBody3D" parent="." instance=ExtResource("3_oxus5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.5, -1.5)
+
+[node name="FloorButton3" parent="." instance=ExtResource("4_iketi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 3.15, 5)
+
+[node name="FloorButton4" parent="." instance=ExtResource("4_iketi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 4.15, 10)
+
+[node name="StaticBoxToPullToo" parent="." instance=ExtResource("5_rcvmm")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8, 7, 5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBoxToPullToo"]
+libraries = {
+"": SubResource("AnimationLibrary_u4c3j")
+}
+autoplay = "moving2"
+
+[node name="StaticBoxToPullToo2" parent="." instance=ExtResource("5_rcvmm")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14, 9, 10)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBoxToPullToo2"]
+libraries = {
+"": SubResource("AnimationLibrary_u4c3j")
+}
+autoplay = "moving2"
+
+[node name="NextLevel" parent="." instance=ExtResource("6_sp1to")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 13.75, 6, 15)
+current_level = 4
+
+[node name="Door" parent="." instance=ExtResource("6_37j50")]
+transform = Transform3D(3, 0, 0, 0, 4, 0, 0, 0, 1, 10.2468, 3.09091, 3.49641)
+
+[node name="Twobuttondoorcontroller" parent="." instance=ExtResource("7_36mru")]
+object = NodePath("../Door")
+button1 = NodePath("FloorButton")
+button2 = NodePath("FloorButton2")
+
+[node name="FloorButton" parent="Twobuttondoorcontroller" instance=ExtResource("4_iketi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.15, -1)
+
+[node name="FloorButton2" parent="Twobuttondoorcontroller" instance=ExtResource("4_iketi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 3.15, -2)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3702, 5.9101, 0)
+light_size = 1.0
+omni_range = 4096.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.558, 8.27032, 11.6331)
+light_size = 1.0
+omni_range = 4096.0
+
+[node name="RigidBody3D2" parent="." instance=ExtResource("3_oxus5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5.5, 13)
+
+[node name="Killzone" parent="." instance=ExtResource("9_cf14x")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 10, -1, 0)

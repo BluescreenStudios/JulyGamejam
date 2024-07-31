@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d0cxwvcfaa4sw"
+path="res://.godot/imported/A2-0002_BSODaudiopostedit00087047.ogg-95ea709b46ab3ee782f620eebbfbe58f.oggvorbisstr"
+
+[deps]
+
+source_file="res://BSOD Audio/A2-0002_BSODaudiopostedit00087047.ogg"
+dest_files=["res://.godot/imported/A2-0002_BSODaudiopostedit00087047.ogg-95ea709b46ab3ee782f620eebbfbe58f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

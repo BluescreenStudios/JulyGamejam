@@ -1,9 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://btxe8i13cuddq"]
 
-[ext_resource type="VideoStream" path="res://crowdstrikecreditsv2.ogv" id="1_kkhbt"]
+[ext_resource type="VideoStream" path="res://crowdstrikecreditsv3.ogv" id="1_md38p"]
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer"]
-offset_right = 40.0
-offset_bottom = 40.0
-stream = ExtResource("1_kkhbt")
+offset_right = 1920.0
+offset_bottom = 1088.0
+scale = Vector2(0.599999, 0.6)
+stream = ExtResource("1_md38p")
 autoplay = true
