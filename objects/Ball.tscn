@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp3cxnaaccix3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_r2cpi"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_tebti"]
+
+[node name="Ball" type="RigidBody3D"]
+collision_layer = 193
+collision_mask = 193
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_r2cpi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+layers = 65
+mesh = SubResource("SphereMesh_tebti")

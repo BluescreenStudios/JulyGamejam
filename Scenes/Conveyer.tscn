@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbwdbute5mt65"]
+
+[ext_resource type="PackedScene" uid="uid://dx0n0h4qo0dbf" path="res://Materials/boxDay.glb" id="1_0ubgk"]
+
+[node name="Button" type="Node3D"]
+
+[node name="boxDay" parent="." instance=ExtResource("1_0ubgk")]
