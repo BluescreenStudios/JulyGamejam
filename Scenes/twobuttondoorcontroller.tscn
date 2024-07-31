@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsew73nqt4irn"]
+
+[ext_resource type="Script" path="res://Scenes/twobuttondoorcontroller.gd" id="1_5rrql"]
+
+[node name="Twobuttondoorcontroller" type="Node"]
+script = ExtResource("1_5rrql")

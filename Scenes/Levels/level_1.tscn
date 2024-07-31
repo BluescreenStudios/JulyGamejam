@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bopwwmed2g8pm"]
+[gd_scene load_steps=13 format=3 uid="uid://bopwwmed2g8pm"]
 
-[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://Scenes/building-blocks-v1.tres" id="1_pi475"]
+[ext_resource type="MeshLibrary" uid="uid://d0yhi5u1pk5e2" path="res://building-blocks-v1.tres" id="1_pi475"]
 [ext_resource type="PackedScene" uid="uid://deu3or8e7myp2" path="res://objects/player.tscn" id="2_bomgq"]
 [ext_resource type="PackedScene" uid="uid://cen4gjfisvlfu" path="res://objects/StaticBoxToPullToo.tscn" id="4_jbwtd"]
 [ext_resource type="PackedScene" uid="uid://cll06clhq26v8" path="res://objects/FloorButton.tscn" id="5_3auiy"]
