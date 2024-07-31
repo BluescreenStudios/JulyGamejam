@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b1fbh2i74ld2w"]
+
+[ext_resource type="Texture2D" uid="uid://cst2u0p208to8" path="res://Materials/floor_edge_basecolor.tga" id="1_v6jlw"]
+[ext_resource type="Texture2D" uid="uid://bd61ugrlvyd2r" path="res://Materials/floor_edge_normal.tga" id="2_pnrg1"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_v6jlw")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_pnrg1")

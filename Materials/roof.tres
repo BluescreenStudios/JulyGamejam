@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://pwohbubvaj8v"]
+
+[ext_resource type="Texture2D" uid="uid://cg83a4302c7p5" path="res://Materials/roof_basecolor.tga" id="1_sghoq"]
+[ext_resource type="Texture2D" uid="uid://cj363038c0rpy" path="res://Materials/floor_main_normal.tga" id="2_6xn4f"]
+
+[resource]
+albedo_texture = ExtResource("1_sghoq")
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_6xn4f")
