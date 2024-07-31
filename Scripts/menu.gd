@@ -4,7 +4,7 @@ extends Control
 
 
 func _on_boot_pressed():
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
 
 
 func _on_levels_pressed():
@@ -13,4 +13,3 @@ func _on_levels_pressed():
 
 func _on_power_off_pressed():
 	get_tree().quit()
-	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b17kue2d4nww3"]
+[gd_scene load_steps=8 format=3 uid="uid://b17kue2d4nww3"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_8dlqn"]
 [ext_resource type="Texture2D" uid="uid://banofyg0dvi5x" path="res://download.png" id="2_vtwql"]
@@ -16,20 +16,6 @@ bg_color = Color(0.333333, 0.333333, 0.333333, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7yfw"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Theme" id="Theme_i5aa1"]
-default_font = ExtResource("2_w8qx4")
-default_font_size = 20
-
-[sub_resource type="FontVariation" id="FontVariation_a8jkl"]
-base_font = ExtResource("2_w8qx4")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5db2o"]
-resource_local_to_scene = true
-bg_color = Color(0.666667, 0.666667, 0.666667, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tltgy"]
-bg_color = Color(0.333333, 0.333333, 0.333333, 1)
-
 [node name="menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -42,17 +28,17 @@ script = ExtResource("1_8dlqn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 5847.0
-offset_bottom = 3711.0
+offset_right = 3508.0
+offset_bottom = 2227.0
 texture = ExtResource("2_vtwql")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 2020.0
-offset_top = 1400.0
-offset_right = 4180.01
-offset_bottom = 3420.0
-scale = Vector2(0.852, 1)
+offset_left = 1202.97
+offset_top = 721.578
+offset_right = 3362.97
+offset_bottom = 2741.58
+scale = Vector2(0.561, 0.659)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -70,44 +56,17 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
 text = "Boot"
 icon_alignment = 1
 
-[node name="Levels" type="MenuButton" parent="MarginContainer/VBoxContainer"]
+[node name="Levels" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_i5aa1")
 theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
-theme_override_fonts/font = SubResource("FontVariation_a8jkl")
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
 theme_override_font_sizes/font_size = 640
-theme_override_styles/normal = SubResource("StyleBoxFlat_5db2o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_tltgy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
 text = "Levels"
-flat = false
-item_count = 13
-popup/item_0/text = "Level 1"
-popup/item_0/id = 0
-popup/item_1/text = "Level 2"
-popup/item_1/id = 1
-popup/item_2/text = "Level 3"
-popup/item_2/id = 2
-popup/item_3/text = "Level 4"
-popup/item_3/id = 3
-popup/item_4/text = "Level 5"
-popup/item_4/id = 4
-popup/item_5/text = "Level 6"
-popup/item_5/id = 5
-popup/item_6/text = "Level 7"
-popup/item_6/id = 6
-popup/item_7/text = "Level 8"
-popup/item_7/id = 7
-popup/item_8/text = "Level 9"
-popup/item_8/id = 8
-popup/item_9/text = "Level 10"
-popup/item_9/id = 9
-popup/item_10/text = "Level 11"
-popup/item_10/id = 10
-popup/item_11/text = "Level 12"
-popup/item_11/id = 11
-popup/item_12/text = "Boss"
-popup/item_12/id = 12
+icon_alignment = 1
 
 [node name="Power off" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -122,15 +81,18 @@ text = "Exit"
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 550.0
-offset_top = 500.0
-offset_right = 2904.0
-offset_bottom = 1100.0
-scale = Vector2(2, 2)
+offset_left = 298.459
+offset_top = 164.932
+offset_right = 2652.46
+offset_bottom = 546.932
+scale = Vector2(1.25, 1.25)
 theme_override_fonts/font = ExtResource("2_w8qx4")
 theme_override_font_sizes/font_size = 381
 text = "Crowdstruck"
 
+[node name="PopupMenu" type="PopupMenu" parent="."]
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Boot" to="." method="_on_boot_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Levels" to="." method="_on_levels_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Power off" to="." method="_on_boot_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Power off" to="." method="_on_power_off_pressed"]

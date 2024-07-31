@@ -74,4 +74,3 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2.00001, 18.206, 20.3811, -1.627
 
 [node name="StaticBoxToPullToo5" parent="." instance=ExtResource("3_xb6wr")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 39.0473, 17.7387, -6.07179)
-
