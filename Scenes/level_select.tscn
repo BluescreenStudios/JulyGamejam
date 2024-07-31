@@ -1,0 +1,249 @@
+[gd_scene load_steps=8 format=3 uid="uid://cttfrhpxoviea"]
+
+[ext_resource type="Script" path="res://Scenes/level_select.gd" id="1_8rwhl"]
+[ext_resource type="Texture2D" uid="uid://banofyg0dvi5x" path="res://download.png" id="2_onc8x"]
+[ext_resource type="FontFile" uid="uid://b6hvpe4ttwual" path="res://Perfect DOS VGA 437.ttf" id="3_2ss0j"]
+
+[sub_resource type="FontVariation" id="FontVariation_fkewq"]
+base_font = ExtResource("3_2ss0j")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjn76"]
+bg_color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whsjf"]
+bg_color = Color(0.333333, 0.333333, 0.333333, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7yfw"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.328353, 0.291029)
+script = ExtResource("1_8rwhl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 3508.0
+offset_bottom = 2227.0
+texture = ExtResource("2_onc8x")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 1181.66
+offset_top = 1690.55
+offset_right = 4181.66
+offset_bottom = 3710.55
+scale = Vector2(0.369, 0.214)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Boss" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "Boss"
+icon_alignment = 1
+
+[node name="Back" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "Back"
+icon_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -73.092
+offset_top = -633.248
+offset_right = 2404.91
+offset_bottom = 1786.75
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.856, 0.594)
+pivot_offset = Vector2(1807.85, 1198.71)
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_constants/h_separation = 250
+theme_override_constants/v_separation = 250
+columns = 4
+
+[node name="1" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "01"
+icon_alignment = 1
+
+[node name="2" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "02"
+icon_alignment = 1
+
+[node name="3" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "03"
+icon_alignment = 1
+
+[node name="4" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "04"
+icon_alignment = 1
+
+[node name="5" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "05"
+icon_alignment = 1
+
+[node name="6" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "06"
+icon_alignment = 1
+
+[node name="7" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "07"
+icon_alignment = 1
+
+[node name="8" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "08"
+icon_alignment = 1
+
+[node name="9" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "09"
+icon_alignment = 1
+
+[node name="10" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "10"
+icon_alignment = 1
+
+[node name="11" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "11"
+icon_alignment = 1
+
+[node name="12" type="Button" parent="MarginContainer2/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.666667, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.333333, 1)
+theme_override_fonts/font = SubResource("FontVariation_fkewq")
+theme_override_font_sizes/font_size = 640
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjn76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_whsjf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r7yfw")
+text = "12"
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Boss" to="." method="_on_boss_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/10" to="." method="_on_10_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/11" to="." method="_on_11_pressed"]
+[connection signal="pressed" from="MarginContainer2/GridContainer/12" to="." method="_on_12_pressed"]
